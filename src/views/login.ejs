@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <% if(user) { %>
+        <p><span class="nombre">Bienvenido <%=user.nombre%></span><span class="logout"><form action ="/logout" method="post"><button class="btn btn-warning">Desloguear</button></form></span></p>
+    <%} else { %>
+        <h1>Login de Usuario</h1>
+        <form action="/login" method="post">
+            <label for="nombre">Ingrese sun nombre</label>
+            <input type="text" name="nombre" placeholder="Write your name" autofocus>
+            <input type="submit" value="Enviar">
+        </form>
+    <% } %>
+    
+</body>
+</html>
